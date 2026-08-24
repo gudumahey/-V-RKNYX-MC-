@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VØRKNYX MC | Official Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+    --bg: #07080f;
+    --bg2: #10101c;
+    --card: rgba(20, 20, 35, 0.78);
+
+    --purple: #8f3dff;
+    --purple2: #bd7aff;
+    --blue: #348cff;
+    --cyan: #42d9ff;
+
+    --gold: #ffc14d;
+    --red: #ff4d6d;
+
+    --white: #ffffff;
+    --muted: #b9b7c9;
+
+    --border: rgba(255,255,255,0.10);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(143,61,255,0.18), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(52,140,255,0.15), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(255,193,77,0.08), transparent 30%),
+        #07080f;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+}
+
+/* BACKGROUND GRID */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+
+    background-size: 45px 45px;
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(7,8,15,0.75);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--purple2);
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c9c7d8;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+
+    text-shadow: 0 0 15px var(--purple);
+}
+
+.nav-discord {
+    padding: 10px 17px;
+
+    border-radius: 10px;
+
+    color: white !important;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue)
+    );
+
+    box-shadow: 0 0 20px rgba(143,61,255,0.35);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 20px 70px;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.server-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 17px;
+
+    border: 1px solid rgba(143,61,255,0.4);
+
+    background: rgba(143,61,255,0.08);
+
+    border-radius: 30px;
+
+    color: #d9c0ff;
+
+    font-size: 12px;
+
+    margin-bottom: 24px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(42px, 8vw, 100px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #bb83ff,
+            #ffffff,
+            #54d8ff
+        );
+
+    background-size: 250%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 6s linear infinite;
+
+    text-shadow: 0 0 40px rgba(143,61,255,0.25);
+}
+
+.hero h1 span {
+    font-size: 0.7em;
+}
+
+.hero-text {
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+    border: 1px solid transparent;
+
+    font-size: 14px;
+}
+
+.btn-primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--blue)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(143,61,255,0.25);
+}
+
+.btn-secondary {
+    color: white;
+
+    background: rgba(255,255,255,0.05);
+
+    border-color: rgba(255,255,255,0.12);
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.online {
+    margin-top: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #a7a6b7;
+
+    font-size: 13px;
+}
+
+.online-dot {
+    width: 9px;
+
+    height: 9px;
+
+    background: #42ff9e;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px #42ff9e;
+
+    animation: pulse 2s infinite;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 95px 7%;
+}
+
+.section-head {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-tag {
+    color: var(--purple2);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.section-head h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(30px, 5vw, 52px);
+
+    margin-top: 12px;
+}
+
+.section-head p {
+    color: var(--muted);
+
+    max-width: 700px;
+
+    margin: 15px auto 0;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   IP SECTION
+========================= */
+
+.ip-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.ip-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.35s;
+}
+
+.ip-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+
+    height: 160px;
+
+    background: var(--purple);
+
+    filter: blur(80px);
+
+    opacity: 0.16;
+
+    top: -70px;
+
+    right: -40px;
+}
+
+.ip-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(143,61,255,0.45);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+}
+
+.ip-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 26px;
+
+    border-radius: 16px;
+
+    background: rgba(143,61,255,0.12);
+
+    margin-bottom: 22px;
+}
+
+.ip-card h3 {
+    font-size: 22px;
+}
+
+.ip-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+.ip-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 24px;
+
+    padding: 13px 15px;
+
+    border-radius: 13px;
+
+    background: rgba(0,0,0,0.3);
+
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.ip-box code {
+    color: #d9baff;
+
+    font-size: 12px;
+
+    word-break: break-all;
+}
+
+.copy-btn {
+    border: none;
+
+    background: rgba(143,61,255,0.18);
+
+    color: white;
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.copy-btn:hover {
+    background: var(--purple);
+}
+
+/* =========================
+   GAME MODES
+========================= */
+
+.modes-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.mode-card {
+    min-height: 310px;
+
+    padding: 32px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(26,25,45,0.95),
+            rgba(10,10,18,0.9)
+        );
+
+    border: 1px solid var(--border);
+
+    transition: 0.4s;
+}
+
+.mode-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(143,61,255,0.5);
+}
+
+.mode-number {
+    position: absolute;
+
+    right: 20px;
+
+    top: 5px;
+
+    font-family: "Orbitron";
+
+    font-size: 70px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-weight: 900;
+}
+
+.mode-icon {
+    font-size: 45px;
+
+    margin-bottom: 25px;
+}
+
+.mode-card h3 {
+    font-family: "Cinzel";
+
+    font-size: 24px;
+}
+
+.mode-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-top: 14px;
+}
+
+.mode-line {
+    width: 50px;
+
+    height: 3px;
+
+    margin-top: 20px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--cyan)
+        );
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(143,61,255,0.12),
+        rgba(52,140,255,0.08)
+    );
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+}
+
+.about-box h3 {
+    font-family: "Cinzel";
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.about-box p {
+    color: var(--muted);
+
+    line-height: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.offer-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+.offer-item {
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.04);
+
+    color: #dedceb;
+
+    font-size: 13px;
+}
+
+/* =========================
+   TEAM
+========================= */
+
+.team-wrapper {
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.team-category {
+    margin-top: 60px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.team-category h3 {
+    font-family: "Cinzel";
+
+    font-size: 25px;
+}
+
+.team-category::before,
+.team-category::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(143,61,255,0.6)
+        );
+}
+
+.team-category::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(143,61,255,0.6),
+            transparent
+        );
+}
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    justify-items: center;
+}
+
+/* UNO CARD STYLE */
+
+.team-card {
+    width: 100%;
+
+    max-width: 330px;
+
+    min-height: 400px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28,27,45,0.98),
+            rgba(10,10,17,0.98)
+        );
+
+    border: 2px solid rgba(255,255,255,0.10);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35);
+
+    transition: 0.45s;
+
+    isolation: isolate;
+}
+
+/* CARD BORDER */
+
+.team-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border-radius: 20px;
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    z-index: -1;
+}
+
+/* UNO OVAL */
+
+.team-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--blue)
+        );
+
+    transform: rotate(45deg);
+
+    opacity: 0.17;
+
+    top: 45px;
+
+    left: 75px;
+
+    z-index: -1;
+}
+
+.team-card:hover {
+    transform:
+        translateY(-12px)
+        rotate(-2deg);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,0.5),
+        0 0 35px rgba(143,61,255,0.22);
+
+    border-color: var(--purple2);
+}
+
+.card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.rank-badge {
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    background: rgba(255,255,255,0.08);
+
+    color: #e3caff;
+}
+
+.card-symbol {
+    font-family: "Orbitron";
+
+    font-size: 20px;
+
+    color: var(--purple2);
+}
+
+.member-avatar {
+    width: 115px;
+
+    height: 115px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(143,61,255,0.3),
+            rgba(52,140,255,0.25)
+        );
+
+    border: 3px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 0 35px rgba(143,61,255,0.2);
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info h4 {
+    font-family: "Orbitron";
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+.member-info p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+.card-bottom {
+    display: flex;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    opacity: 0.8;
+}
+
+/* SPECIAL CARDS */
+
+.owner-card {
+    border-color: rgba(255,193,77,0.45);
+}
+
+.owner-card::after {
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--purple)
+        );
+}
+
+.owner-card .rank-badge {
+    color: #ffe2a3;
+
+    background: rgba(255,193,77,0.13);
+}
+
+.founder-card::after {
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #ff68cc
+        );
+}
+
+.manager-card::after {
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+}
+
+.mod-card::after {
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--purple)
+        );
+}
+
+.brother-card::after {
+    background:
+        linear-gradient(
+            135deg,
+            #2b2b3d,
+            #111118
+        );
+}
+
+/* =========================
+   RULES
+========================= */
+
+.rules-box {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+.rule {
+    padding: 20px;
+
+    border-radius: 17px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    transition: 0.3s;
+}
+
+.rule:hover {
+    background: rgba(143,61,255,0.09);
+
+    transform: translateX(5px);
+}
+
+.rule h4 {
+    font-size: 15px;
+}
+
+.rule p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 8px;
+
+    line-height: 1.7;
+}
+
+.punishment {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,77,109,0.25);
+
+    background: rgba(255,77,109,0.07);
+
+    color: #ffd6de;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(143,61,255,0.14),
+            rgba(52,140,255,0.10)
+        );
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-box h2 {
+    font-family: "Cinzel";
+
+    font-size: 38px;
+}
+
+.social-box p {
+    color: var(--muted);
+
+    margin-top: 15px;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 7%;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: #888596;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #d5baff;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%) translateY(100px);
+
+    padding: 13px 20px;
+
+    background: #171522;
+
+    border: 1px solid rgba(143,61,255,0.5);
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 13px;
+
+    z-index: 9999;
+
+    transition: 0.4s;
+
+    opacity: 0;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+
+    opacity: 1;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+@keyframes shine {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 250%;
+    }
+
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(66,255,158,0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(66,255,158,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(66,255,158,0);
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .ip-grid,
+    .modes-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        max-width: 430px;
+    }
+
+    .offer-list,
+    .rules-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .ip-card,
+    .mode-card {
+        padding: 25px;
+    }
+
+    .about-box {
+        padding: 30px 18px;
+    }
+
+    .social-box h2 {
+        font-size: 29px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <a href="#home" class="logo">
+        ⚡ VØRKNYX <span>MC</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#ip">PLAY</a></li>
+        <li><a href="#modes">MODES</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#rules">RULES</a></li>
+        <li>
+            <a
+                class="nav-discord"
+                href="https://discord.gg/"
+                target="_blank"
+            >
+                DISCORD
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="server-tag">
+            ⚡ OFFICIAL MINECRAFT NETWORK
+        </div>
+
+        <h1>
+            𓆩⚡ VØRKNYX MC ⚔𓆪
+        </h1>
+
+        <p class="hero-text">
+
+            Welcome to Vorknyx MC — a friendly Minecraft Server and Discord Community
+            where players can enjoy survival, intense battles, events, giveaways,
+            and an active community.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#ip" class="btn btn-primary">
+                🎮 PLAY NOW
+            </a>
+
+            <a
+                href="https://discord.gg/"
+                target="_blank"
+                class="btn btn-secondary"
+            >
+                💜 JOIN DISCORD
+            </a>
+
+        </div>
+
+        <div class="online">
+
+            <span class="online-dot"></span>
+
+            Vorknyx MC Network • Ready for Adventure
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IP SECTION -->
+
+<section id="ip">
+
+    <div class="section-head">
+
+        <div class="section-tag">
+            JOIN THE NETWORK
+        </div>
+
+        <h2>
+            VORKNYX MC OFFICIAL IP
+        </h2>
+
+        <p>
+            Join using the official server addresses below.
+            For now, please use only these IP details.
+        </p>
+
+    </div>
+
+
+    <div class="ip-grid">
+
+
+        <!-- JAVA -->
+
+        <div class="ip-card">
+
+            <div class="ip-icon">
+                ☕
+            </div>
+
+            <h3>
+                Java Edition
+            </h3>
+
+            <p>
+                Join Vorknyx MC from Minecraft Java Edition.
+            </p>
+
+            <div class="ip-box">
+
+                <code id="javaIP">
+                    node-2.lightingmc.net
+                </code>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyIP('javaIP')"
+                >
+                    COPY
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEDROCK -->
+
+        <div class="ip-card">
+
+            <div class="ip-icon">
+                📱
+            </div>
+
+            <h3>
+                Bedrock Edition
+            </h3>
+
+            <p>
+                IP: node-2.lightingmc.net
+                <br>
+                Port: 25568
+            </p>
+
+            <div class="ip-box">
+
+                <code id="bedrockIP">
+                    node-2.lightingmc.net:25568
+                </code>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyIP('bedrockIP')"
+                >
+                    COPY
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section>
+
+    <div class="section-head">
+
+        <div class="section-tag">
+            THE COMMUNITY
+        </div>
+
+        <h2>
+            WHY JOIN VORKNYX MC?
+        </h2>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <h3>
+            ⚡ More Than Just A Server
+        </h3>
+
+        <p>
+
+            Vorknyx MC is a community where players can play,
+            compete, meet new people, participate in events,
+            and enjoy Minecraft together.
+
+        </p>
+
+
+        <div class="offer-list">
+
+            <div class="offer-item">
+                🎮 Minecraft Survival Gameplay
+            </div>
+
+            <div class="offer-item">
+                🤝 Friendly & Active Community
+            </div>
+
+            <div class="offer-item">
+                🎉 Events & Giveaways
+            </div>
+
+            <div class="offer-item">
+                🛠️ Server Support & Updates
+            </div>
+
+            <div class="offer-item">
+                💬 Fun Chats & Voice Channels
+            </div>
+
+            <div class="offer-item">
+                ⚔️ Competitive & Fun Gameplay
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GAME MODES -->
+
+<section id="modes">
+
+    <div class="section-head">
+
+        <div class="section-tag">
+            GAMEPLAY
+        </div>
+
+        <h2>
+            OUR GAME MODES
+        </h2>
+
+        <p>
+            Different adventures. Different challenges.
+            One powerful network.
+        </p>
+
+    </div>
+
+
+    <div class="modes-grid">
+
+
+        <div class="mode-card">
+
+            <div class="mode-number">
+                01
+            </div>
+
+            <div class="mode-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Lifesteal
+            </h3>
+
+            <p>
+
+                Fight powerful enemies, survive dangerous adventures,
+                and become stronger than everyone else.
+
+            </p>
+
+            <div class="mode-line"></div>
+
+        </div>
+
+
+        <div class="mode-card">
+
+            <div class="mode-number">
+                02
+            </div>
+
+            <div class="mode-icon">
+                ⚔️
+            </div>
+
+            <h3>
+                Practice
+            </h3>
+
+            <p>
+
+                Improve your PvP skills, challenge other players,
+                and prove that you are one of the best fighters.
+
+            </p>
+
+            <div class="mode-line"></div>
+
+        </div>
+
+
+        <div class="mode-card">
+
+            <div class="mode-number">
+                03
+            </div>
+
+            <div class="mode-icon">
+                🏛️
+            </div>
+
+            <h3>
+                Pillars of Fortune
+            </h3>
+
+            <p>
+
+                Take risks, discover rewards,
+                and climb your way through a unique adventure.
+
+            </p>
+
+            <div class="mode-line"></div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- TEAM -->
+
+<section id="team">
+
+    <div class="section-head">
+
+        <div class="section-tag">
+            MEET THE PEOPLE
+        </div>
+
+        <h2>
+            ⚔ OUR TEAM ⚔
+        </h2>
+
+        <p>
+            The people behind Vorknyx MC.
+            Every card represents an important member of the network.
+        </p>
+
+    </div>
+
+
+    <div class="team-wrapper">
+
+
+        <!-- OWNER -->
+
+        <div class="team-category">
+            <h3>👑 OWNER</h3>
+        </div>
+
+
+        <div class="team-grid">
+
+            <div class="team-card owner-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        OWNER
+                    </span>
+
+                    <span class="card-symbol">
+                        ⚡
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    👑
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        𝗩𝗼𝗿𝗸𝗻𝘆𝘅-𝐓𝐡𝐞 ᵍᵒᵈ ✨
+                    </h4>
+
+                    <p>
+                        Supreme Owner of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    👑
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOUNDERS -->
+
+        <div class="team-category">
+            <h3>✨ FOUNDERS</h3>
+        </div>
+
+
+        <div class="team-grid">
+
+
+            <div class="team-card founder-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        FOUNDER
+                    </span>
+
+                    <span class="card-symbol">
+                        ◆
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    🎬
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        Justin Playzz
+                    </h4>
+
+                    <p>
+                        Founder of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    ✨
+                </div>
+
+            </div>
+
+
+            <div class="team-card founder-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        FOUNDER
+                    </span>
+
+                    <span class="card-symbol">
+                        ◆
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    👑
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        𝐀𝐇𝐒𝐀𝐍™
+                    </h4>
+
+                    <p>
+                        Founder of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    ✨
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- MANAGER -->
+
+        <div class="team-category">
+            <h3>🛡 MANAGER</h3>
+        </div>
+
+
+        <div class="team-grid">
+
+            <div class="team-card manager-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        MANAGER
+                    </span>
+
+                    <span class="card-symbol">
+                        ◈
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    ⚫
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        ♢𝓼𝓵𝓲𝓰𝓱𝓽𝓮𝓻
+                    </h4>
+
+                    <p>
+                        Manager of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    🛡️
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MODERATOR -->
+
+        <div class="team-category">
+            <h3>⚔ MODERATOR</h3>
+        </div>
+
+
+        <div class="team-grid">
+
+            <div class="team-card mod-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        MODERATOR
+                    </span>
+
+                    <span class="card-symbol">
+                        ⚔
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    🔥
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        亗 𝓘𝓼𝓱𝓪𝓷𝓖𝓪𝓶𝓲𝓷𝓰 ⚔️🔥
+                    </h4>
+
+                    <p>
+                        Moderator of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    ⚔️
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BROTHER -->
+
+        <div class="team-category">
+            <h3>🖤 BROTHER</h3>
+        </div>
+
+
+        <div class="team-grid">
+
+            <div class="team-card brother-card">
+
+                <div class="card-top">
+
+                    <span class="rank-badge">
+                        BROTHER
+                    </span>
+
+                    <span class="card-symbol">
+                        🖤
+                    </span>
+
+                </div>
+
+                <div class="member-avatar">
+                    🖤
+                </div>
+
+                <div class="member-info">
+
+                    <h4>
+                        ⟦ 𝙂𝙐𝘿𝙐𝙈𝘼𝙃𝙀𝙔 ⟧
+                    </h4>
+
+                    <p>
+                        Brother of Vorknyx MC
+                    </p>
+
+                </div>
+
+                <div class="card-bottom">
+                    ⚡
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- RULES -->
+
+<section id="rules">
+
+    <div class="section-head">
+
+        <div class="section-tag">
+            COMMUNITY GUIDELINES
+        </div>
+
+        <h2>
+            SERVER RULES
+        </h2>
+
+        <p>
+            Play fair, stay respectful, and help keep the Vorknyx MC community fun.
+        </p>
+
+    </div>
+
+
+    <div class="rules-box">
+
+
+        <div class="rule">
+            <h4>🛡️ Respect Everyone</h4>
+            <p>Be respectful to all players and members.</p>
+        </div>
+
+
+        <div class="rule">
+            <h4>📨 No Spamming</h4>
+            <p>No message, ping, or voice chat spam.</p>
+        </div>
+
+
+        <div class="rule">
+            <h4>🌿 Keep It Clean</h4>
+            <p>No inappropriate content or behaviour.</p>
+        </div>
+
+
+        <div class="rule">
+            <h4>🚩 No Advertising</h4>
+            <p>No self-promotion or unwanted invites.</p>
+        </div>
+
+
+        <div class="rule">
+            <h4>⚒️ Fair Play Only</h4>
+            <p>No cheats, hacks, x-ray, or unfair exploits.</p>
+        </div>
+
+
+        <div class="rule">
+            <h4>👮 Respect Staff</h4>
+            <p>Follow staff instructions and respect decisions.</p>
+        </div>
+
+
+    </div>
+
+
+    <div class="punishment">
+
+        ⚠️ <strong>PUNISHMENTS:</strong>
+        Warn → Mute → Kick → Ban
+
+        <br><br>
+
+        ☠️ Cheating & Exploiting can result in an instant ban.
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section>
+
+    <div class="social-box">
+
+        <h2>
+            JOIN THE COMMUNITY
+        </h2>
+
+        <p>
+            Join our Discord community for updates, events,
+            giveaways, support, and more!
+        </p>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://discord.gg/"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                💜 JOIN DISCORD
+            </a>
+
+
+            <a
+                href="https://www.youtube.com/@JustinPlayzzYTT"
+                target="_blank"
+                class="btn btn-secondary"
+            >
+                ▶ YOUTUBE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026
+    <strong>VØRKNYX MC</strong>
+    • Official Minecraft Network
+
+    <br><br>
+
+    ⚔ Play Fair • 🤝 Stay Respectful • 🎮 Have Fun
+
+</footer>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+    IP Copied Successfully!
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function copyIP(id) {
+
+    const text =
+        document
+            .getElementById(id)
+            .innerText;
+
+    navigator
+        .clipboard
+        .writeText(text);
+
+    const toast =
+        document
+            .getElementById("toast");
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2500);
+
+}
+
+</script>
+
+</body>
+</html>
